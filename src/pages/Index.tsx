@@ -61,33 +61,30 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <header className="relative overflow-hidden bg-primary">
-        {/* Store photo background */}
-        <div className="absolute inset-0">
+      <header className="relative overflow-hidden">
+        {/* Store photo */}
+        <div className="relative h-56 sm:h-72">
           <img
             src={lojaPhoto}
             alt="Loja Rafa Bike"
-            className="h-full w-full object-cover opacity-60"
+            className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/40 to-primary/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent" />
         </div>
-        {/* Content */}
-        <div className="relative z-10 px-4 pt-10 pb-16 text-center">
-          <div className="mx-auto max-w-md">
-            <img
-              src={logo}
-              alt="Rafa Bike Logo"
-              className="mx-auto mb-4 h-28 w-28 rounded-2xl object-cover shadow-lg ring-2 ring-primary-foreground/20"
-            />
-            <h1 className="font-heading text-2xl font-black tracking-tight text-primary-foreground drop-shadow-md">
-              Rafa Bike
-            </h1>
-            <p className="mt-1 text-sm font-medium text-primary-foreground/85">
-              Aluguel, Revisão e Montagem
-            </p>
-          </div>
+        {/* Logo + text overlay */}
+        <div className="relative -mt-16 z-10 text-center px-4 pb-10">
+          <img
+            src={logo}
+            alt="Rafa Bike Logo"
+            className="mx-auto mb-3 h-28 w-28 rounded-2xl object-cover shadow-xl ring-4 ring-background"
+          />
+          <h1 className="font-heading text-2xl font-black tracking-tight text-foreground">
+            Rafa Bike
+          </h1>
+          <p className="mt-1 text-sm font-medium text-muted-foreground">
+            Aluguel, Revisão e Montagem
+          </p>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-6 rounded-t-[2rem] bg-background" />
       </header>
 
       <main className="mx-auto max-w-lg px-4 pb-10 -mt-1">
