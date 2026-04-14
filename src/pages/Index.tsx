@@ -67,9 +67,9 @@ const Index = () => {
           <img
             src={lojaPhoto}
             alt="Loja Rafa Bike"
-            className="h-full w-full object-cover opacity-30"
+            className="h-full w-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/40 to-primary/70" />
         </div>
         {/* Content */}
         <div className="relative z-10 px-4 pt-10 pb-16 text-center">
