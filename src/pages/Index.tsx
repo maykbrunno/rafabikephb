@@ -1,4 +1,5 @@
 import logo from "@/assets/logo-rafabike.png";
+import lojaPhoto from "@/assets/loja-rafabike.png";
 import servicoRevisao from "@/assets/servico-revisao.jpeg";
 import servicoMontagem from "@/assets/servico-montagem.jpeg";
 import servicoAluguel from "@/assets/servico-aluguel.jpeg";
@@ -60,19 +61,31 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
-      <header className="relative bg-primary px-4 pt-10 pb-14 text-center">
-        <div className="mx-auto max-w-md">
+      <header className="relative overflow-hidden bg-primary">
+        {/* Store photo background */}
+        <div className="absolute inset-0">
           <img
-            src={logo}
-            alt="Rafa Bike Logo"
-            className="mx-auto mb-4 h-32 w-32 rounded-2xl object-cover shadow-lg"
+            src={lojaPhoto}
+            alt="Loja Rafa Bike"
+            className="h-full w-full object-cover opacity-30"
           />
-          <h1 className="font-heading text-2xl font-900 tracking-tight text-primary-foreground">
-            Rafa Bike
-          </h1>
-          <p className="mt-1 text-sm font-medium text-primary-foreground/80">
-            Aluguel, Revisão e Montagem
-          </p>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary" />
+        </div>
+        {/* Content */}
+        <div className="relative z-10 px-4 pt-10 pb-16 text-center">
+          <div className="mx-auto max-w-md">
+            <img
+              src={logo}
+              alt="Rafa Bike Logo"
+              className="mx-auto mb-4 h-28 w-28 rounded-2xl object-cover shadow-lg ring-2 ring-primary-foreground/20"
+            />
+            <h1 className="font-heading text-2xl font-black tracking-tight text-primary-foreground drop-shadow-md">
+              Rafa Bike
+            </h1>
+            <p className="mt-1 text-sm font-medium text-primary-foreground/85">
+              Aluguel, Revisão e Montagem
+            </p>
+          </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-6 rounded-t-[2rem] bg-background" />
       </header>
