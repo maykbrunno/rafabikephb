@@ -3,7 +3,8 @@ import lojaPhoto from "@/assets/loja-rafabike.png";
 import servicoRevisao from "@/assets/servico-revisao.jpeg";
 import servicoMontagem from "@/assets/servico-montagem.jpeg";
 import servicoAluguel from "@/assets/servico-aluguel.jpeg";
-import { Phone, MapPin, Instagram, MessageCircle, UserPlus, Wrench, Bike, Truck, Settings } from "lucide-react";
+import { Phone, MapPin, Instagram, MessageCircle, UserPlus, Wrench, Bike, Truck, Settings, Star } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const WHATSAPP_NUMBER = "5586988362710";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -58,6 +59,7 @@ const features = [
 ];
 
 const Index = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
       {/* Hero */}
@@ -120,6 +122,20 @@ const Index = () => {
             <UserPlus className="h-5 w-5" />
             Salvar Contato
           </button>
+        </section>
+
+        {/* Fidelidade CTA */}
+        <section className="mb-8">
+          <button
+            onClick={() => navigate("/fidelidade")}
+            className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent/80 px-6 py-5 font-heading text-base font-black text-accent-foreground shadow-lg transition-transform hover:scale-[1.02]"
+          >
+            <Star className="h-6 w-6 fill-current" />
+            RafaBike Fidelidade
+          </button>
+          <p className="text-center mt-2 text-xs font-semibold text-muted-foreground">
+            Acompanhe seus adesivos e resgate prêmios exclusivos!
+          </p>
         </section>
 
         {/* Services */}
